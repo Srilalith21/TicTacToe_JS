@@ -58,7 +58,6 @@ function checkkWinners() {
       cell.forEach((element) => {
         element.innerHTML = "";
       });
-      currentPlayer = 1;
       boolValue = false;
     } else if (strValue == "ooo") {
       alert("player 2 won");
@@ -66,7 +65,6 @@ function checkkWinners() {
       cell.forEach((element) => {
         element.innerHTML = "";
       });
-      currentPlayer = 1;
     }
   }
 }
@@ -82,5 +80,6 @@ cell.forEach((elem) => {
 resetButton.addEventListener("click", () => {
   cell.forEach((element) => {
     element.innerHTML = "";
+    currentPlayer = 1;
   });
 });
