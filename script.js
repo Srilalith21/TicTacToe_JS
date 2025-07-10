@@ -17,8 +17,9 @@ function swithPlayerAndDispayValue(element) {
   }
   counter += 1;
   if (counter > 8 && boolValue) {
+    playAudio("draw")
     alert("draw");
-    current player = 1;
+    currentPlayer = 1;
   }
   checkkWinners();
 }
@@ -54,13 +55,15 @@ function checkkWinners() {
         break;
     }
     if (strValue == "xxx") {
-      alert("player 1 won");
+      playAudio("winner")
+      alert("Player 1 won");
       cell.forEach((element) => {
         element.innerHTML = "";
       });
       boolValue = false;
     } else if (strValue == "ooo") {
-      alert("player 2 won");
+      playAudio("winner")
+      alert("Player 2 won");
       boolValue = false;
       cell.forEach((element) => {
         element.innerHTML = "";
@@ -69,10 +72,25 @@ function checkkWinners() {
   }
 }
 
+function playAudio(typeOfAudio) {
+  const wrongAudio = new Audio("./audio/wrong.mp3");
+  const winAudio = new Audio("./audio/win.mp3");
+  const drawAudio = new Audio("./audio/draw.mp3");
+  if (typeOfAudio == "winner") {
+    winAudio.play();
+  } else if (typeOfAudio == "wrong") {
+    wrongAudio.play();
+  } else {
+    winAudio.play();
+  }
+}
+
 cell.forEach((elem) => {
   elem.addEventListener("click", () => {
     if (elem.innerHTML == "") {
       swithPlayerAndDispayValue(elem);
+    } else {
+      playAudio("wrong")
     }
   });
 });
