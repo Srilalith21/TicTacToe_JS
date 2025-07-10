@@ -18,6 +18,7 @@ function swithPlayerAndDispayValue(element) {
   counter += 1;
   if (counter > 8 && boolValue) {
     alert("draw");
+    current player = 1;
   }
   checkkWinners();
 }
@@ -57,6 +58,7 @@ function checkkWinners() {
       cell.forEach((element) => {
         element.innerHTML = "";
       });
+      currentPlayer = 1;
       boolValue = false;
     } else if (strValue == "ooo") {
       alert("player 2 won");
@@ -64,6 +66,7 @@ function checkkWinners() {
       cell.forEach((element) => {
         element.innerHTML = "";
       });
+      currentPlayer = 1;
     }
   }
 }
