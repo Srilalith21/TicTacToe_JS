@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(37, 2, 37);
+}
+
+nav {
+  height: 5rem;
+  width: 100%;
+  background-color: rgb(77, 2, 77);
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.container {
+  margin: 40px auto;
+  height: 20rem;
+  width: 20rem;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.container button {
+  height: 6rem;
+  width: 6rem;
+  font-size: 4rem;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  border: 1px transparent;
+}
+
+.container button:hover{
+  background-color: rgb(131, 74, 137);
+  color: white;
+}
+
+.result-area {
+  margin: auto;
+  height: 5rem;
+  width: 20rem;
+  padding-top: 1em;
+}
+
+.result-area p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.result-area p button {
+  height: 3rem;
+  width: 6rem;
+  background-color: rgb(107, 19, 103);
+  margin-top: 5px;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.result-area p button:hover {
+  background-color: rgb(96, 30, 111);
+  color: white;
+}
